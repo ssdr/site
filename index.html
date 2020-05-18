@@ -1,0 +1,37 @@
+---
+title: Hey, this is 牧童Damian.
+layout: default
+---
+
+<ul class="terminal">
+  <li>I currently work at <a href="https://alibaba.com/">Alibaba</a> as a Senior Engineer.</li>
+  <li>I am based in Beijing since 2013.</li>
+  <li>I play <a href="/football">football</a> sometimes.</li>
+  <li>
+    You can catch me at:
+    <a href="/wechat" ref="me">wechat</a>,
+    <a href="https://github.com/ssdr" rel="me">GitHub</a>,
+    <a href="https://twitter.com/ssdrliu" rel="me">Twitter</a>,
+    <a href="https://weibo.com/ssdrliu" rel="me">Weibo</a>,
+    or ssdrliu at gmail.com.
+  </li>
+</ul>
+
+<ul class="terminal">
+  <li>I <a href="/notes">write random notes here</a>. Subscribe to them with <a href="/notes.xml">RSS</a>.</li>
+{% assign note = site.data.notes[0] %}
+<div class="note">
+  <div class="note-heading">Latest note # {{ note.date | date: "%b %d, %Y" }}</div>
+  {{ note.content | markdownify }}
+</div>
+</ul>
+
+<ul class="terminal">
+  <li>I <a href="/posts">write some blogs here</a>. Subscribe to them with <a href="/feed.xml">RSS</a>.</li>
+{% assign post = site.posts[0] %}
+<div class="note">
+  <div class="note-heading">Latest blog # {{ post.date | date: "%b %d, %Y" }}</div>
+  <a href="{{ post.url }}" class="small">{{ post.title }}</a>
+  {{ post.excerpt | markdownify }}
+</div>
+</ul>

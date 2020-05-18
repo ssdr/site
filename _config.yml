@@ -1,0 +1,26 @@
+title:            damian's life
+description:      who is damian
+url:              https://damian.life
+
+permalink:        pretty
+timezone:         Asia/Shanghai
+sass:
+  sass_dir: assets
+  style: :compressed
+collections:
+  - notes
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "damian"
+  -
+    scope:
+      path: "images/*.*"
+    values:
+      image: true
+

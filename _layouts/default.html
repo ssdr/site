@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <link rel="alternate" type="application/rss+xml" href="/notes.xml">
+    <link rel="shortcut icon" href="/assets/fav.png">
+    <link rel="shortcut icon" href="/assets/fav.svg">
+    <link rel="me" href="https://micro.blog/yanke" />
+    <link rel="authorization_endpoint" href="https://github-indieauth.herokuapp.com/auth" />
+    <link rel="token_endpoint" href="https://github-indieauth.herokuapp.com/token" />
+    <link rel="micropub" href="https://damian-life-endpoint.glitch.me/micropub">
+    {% if page.date %}
+      <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+      <meta content="{{ page.content | strip_html | strip_newlines | truncate: 120 }}" name="description">
+      <meta content="article" property="og:type">
+      {% if page.image %}
+        <meta content="http://damian.life/images/{{ page.image }}" property="og:image">
+      {% endif %}
+      <title>{{ page.title }} - {{ site.title }}</title>
+    {% else %}
+      <title>{{ site.title }}</title>
+      <meta content="{{ site.description }}" name="description">
+      <meta content="blog" property="og:type">
+    {% endif %}
+  </head>
+  <body>
+    <header>
+      <h1 class="h1">
+        {{ page.title }}<span class="blink">|</span>
+      </h1>
+      {% if page.date %}<small>{{ page.date | date_to_string }}</small><br>{% endif %}
+      {% if page.path != 'index.html' %}
+        <small><a href="/"> $ cd ~</a></small>
+      {% endif %}
+    </header>
+    <main>
+      {% if page.date %}
+<span id="busuanzi_container_page_pv">
+      👀 <span id="busuanzi_value_page_pv"></span>
+</span>
+        <article>
+          {{ content }}
+        </article>
+        <div class="pagination">
+          {% if page.previous %}
+            <div><a href="{{ page.previous.url }}">
+              Prev: {{ page.previous.title }}
+            </a></div>
+          {% endif %}
+          {% if page.next %}
+            <div><a href="{{ page.next.url }}">
+              Next: {{ page.next.title }}
+            </a></div>
+          {% endif %}
+        </div>
+      {% else %}
+<span id="busuanzi_container_page_pv">
+      👀 <span id="busuanzi_value_page_pv"></span>
+</span>
+        {{ content }}
+      {% endif %}
+
+{% if page.date or page.output == true %}
+<div id="disqus_thread"></div>
+{% endif %}
+
+<span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次。
+</span>
+
+    </main>
+
+    <link href="/assets/new.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cousine&display=swap" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118678203-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-118678203-1');
+</script>
+
+<!-- disqus comments -->
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://ssdr.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!-- pv/uv -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>
