@@ -4,6 +4,6 @@ title: Football
 output: true
 ---
 
-![football]({% link /assets/football.jpeg %})
+![football]({% link /images/football.jpeg %})
 
 <a href="/"> $ cd ~</a>
