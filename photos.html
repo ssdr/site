@@ -21,19 +21,18 @@ title: Photo Booth
   </head>
 
   <body>
+    <main>
     <span id="busuanzi_container_page_pv">
           👀 <span id="busuanzi_value_page_pv"></span>
     </span>
     <p></p>
+
     {% assign image_files = site.static_files | where: "image", true %}
     {% for img in image_files %}
         <a href={{ img.path }}><img width=50 src={{ img.path }}></img></a>
     {% endfor %}
 
-    <main class="wrapper">
-        <p></p>
-        <a href="/"> $ cd ~</a>
+    <div id="disqus_thread"></div>
     </main>
-
   </body>
 </html>
