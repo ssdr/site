@@ -6,12 +6,14 @@ category: Nginx
 * 目录
 {:toc #markdown-toc}
 
+*[reference](http://nginx.org/en/docs/)*
+
 ## 简介
 
  - 安装Nginx
  - [源码编译Nginx](/ngx-docs/building-nginx-from-sources)
- - 新手教程
- - 管理员教程
+ - 新手指南
+ - [管理员指南](https://docs.nginx.com/nginx/admin-guide/)
  - 控制Nginx
  - 连接处理方法
  - 设置hash
@@ -21,12 +23,12 @@ category: Nginx
  - 命令行参数
  - Nginx for Windows
 
- - [Nginx如何处理一个请求](/ngx-docs/how-nginx-processes-a-request)
- - [虚拟主机名 Server name](/ngx-docs/server-names)
+ - [Nginx 是如何处理一个请求的](/ngx-docs/how-nginx-processes-a-request)
+ - [虚拟主机名 Server names](/ngx-docs/server-names)
  - 使用Nginx作为HTTP负载均衡器
- - [配置HTTPs服务](http://nginx.org/cn/docs/http/configuring_https_servers.html)
+ - [配置HTTPS 服务](http://nginx.org/cn/docs/http/configuring_https_servers.html)
 
- - Nginx 如何处理TCP/UDP会话
+ - Nginx 是如何处理TCP/UDP会话的
 
  - njs 脚本
 
@@ -41,17 +43,24 @@ category: Nginx
  - [转换重写规则](/ngx-docs/converting-rewrite-rules)
  - WebSocket 代理
 
+## 开发
+
+ - 贡献变更
+ - **开发者指南**
+
 ## 模块参考
 
- - 指令列表
- - 变量列表
+ - **指令列表**
+ - **变量列表**
 
  - 核心功能
 
  - ngx_http_core_module
  - ngx_http_access_module
  - ngx_http_addition_module
+ - ngx_http_api_module
  - ngx_http_auth_basic_module
+ - ngx_http_auth_jwt_module
  - ngx_http_auth_request_module
  - ngx_http_autoindex_module
  - ngx_http_browser_module
@@ -70,11 +79,14 @@ category: Nginx
  - ngx_http_hls_module
  - ngx_http_image_filter_module
  - ngx_http_index_module
+ - ngx_http_js_module
+ - ngx_http_keyval_module
  - ngx_http_limit_conn_module
  - ngx_http_limit_req_module
  - ngx_http_log_module
  - ngx_http_map_module
  - ngx_http_memcached_module
+ - ngx_http_mirror_module
  - ngx_http_mp4_module
  - ngx_http_perl_module
  - ngx_http_proxy_module
@@ -93,8 +105,11 @@ category: Nginx
  - ngx_http_stub_status_module
  - ngx_http_sub_module
  - ngx_http_upstream_module
+ - ngx_http_upstream_conf_module
+ - ngx_http_upstream_hc_module
  - ngx_http_userid_module
  - ngx_http_uwsgi_module
+ - ngx_http_v2_module
  - ngx_http_xslt_module
 
  - ngx_mail_core_module
@@ -106,7 +121,25 @@ category: Nginx
  - ngx_mail_smtp_module
 
  - ngx_stream_core_module
+ - ngx_stream_access_module
+ - ngx_stream_geo_module
+ - ngx_stream_geoip_module
+ - ngx_stream_js_module
+ - ngx_stream_keyval_module
+ - ngx_stream_limit_conn_module
+ - ngx_stream_log_module
+ - ngx_stream_map_module
+ - ngx_stream_proxy_module
+ - ngx_stream_realip_module
+ - ngx_stream_return_module
+ - ngx_stream_split_clients_module
+ - ngx_stream_ssl_module
+ - ngx_stream_ssl_preread_module
  - ngx_stream_upstream_module
- - others
+ - ngx_stream_upstream_hc_module
+ - ngx_stream_zone_sync_module
 
  - ngx_google_perftools_module
+
+ ---
+ *updated at 2020.06.22*
