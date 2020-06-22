@@ -5,7 +5,14 @@ title: Blogs
 <summary><h2 class="as-text">Nginx</h2></summary>
   <ul class="note">
     {% for post in site.posts %}
-      {% if post.category == 'Nginx' %}
+      {% if post.category == 'Nginx' and post.title == 'Nginx文档【持续更新】' %}
+          <li id="date-{{ post.date | date: "%Y-%m-%d" }}{{ post.slug }}">
+            <time class="small">{{ post.date | date: "%b %d, %Y" }}</time> <a href="{{ post.url }}" class="small">{{post.title}}</a>
+          </li>
+      {% endif %}
+    {% endfor %}
+    {% for post in site.posts %}
+      {% if post.category == 'Nginx' and post.title != 'Nginx文档【持续更新】' %}
           <li id="date-{{ post.date | date: "%Y-%m-%d" }}{{ post.slug }}">
             <time class="small">{{ post.date | date: "%b %d, %Y" }}</time> <a href="{{ post.url }}" class="small">{{post.title}}</a>
           </li>
@@ -17,17 +24,6 @@ title: Blogs
   <ul class="note">
     {% for post in site.posts %}
       {% if post.category == 'manual' %}
-          <li id="date-{{ post.date | date: "%Y-%m-%d" }}{{ post.slug }}">
-            <time class="small">{{ post.date | date: "%b %d, %Y" }}</time> <a href="{{ post.url }}" class="small">{{post.title}}</a>
-          </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-<summary><h2 class="as-text">Leetcode</h2></summary>
-  <ul class="note">
-    {% for post in site.posts %}
-      {% if post.category == 'leetcode' %}
           <li id="date-{{ post.date | date: "%Y-%m-%d" }}{{ post.slug }}">
             <time class="small">{{ post.date | date: "%b %d, %Y" }}</time> <a href="{{ post.url }}" class="small">{{post.title}}</a>
           </li>

@@ -1,5 +1,5 @@
 ---
-title: "Nginx命令"
+title: "Nginx简介"
 description: "Nginx相关"
 category: Nginx
 tags: nginx
