@@ -1,6 +1,7 @@
 ---
 title: Nginx开发指南
 category: Nginx
+permalink: /ngx-docs/:title/
 ---
 
 * 目录
