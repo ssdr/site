@@ -46,7 +46,7 @@ category: Nginx
 ## 开发
 
  - 贡献变更
- - **开发者指南**
+ - **[开发者指南](ngx-docs/ngx-devel-guide)**
 
 ## 模块参考
 
