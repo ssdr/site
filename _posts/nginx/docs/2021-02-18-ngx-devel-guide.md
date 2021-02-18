@@ -1,6 +1,6 @@
 ---
 title: Nginx开发指南
-category: Nginx
+category: Nginx文档
 permalink: /ngx-docs/:title/
 ---
 
