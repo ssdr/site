@@ -4,13 +4,13 @@ layout: default
 ---
 
 <ul class="terminal">
-  <li>I currently work at <a href="https://alibaba.com/">Alibaba</a> as a Senior Engineer.</li>
+  <li>I currently work at Alibaba as an Senior Engineer.</li>
   <li>I am based in Beijing since 2013.</li>
   <li>I play <a href="/football">football</a> sometimes.</li>
   <li>Here is a <a href="/photos">Photo Booth</a>.</li>
   <li>
     You can catch me at:
-    <a href="/wechat" ref="me">wechat</a>,
+    <a href="/wechat" ref="me">Wechat</a>,
     <a href="https://github.com/ssdr" rel="me">GitHub</a>,
     <a href="https://twitter.com/ssdrliu" rel="me">Twitter</a>,
     <a href="https://weibo.com/ssdrliu" rel="me">Weibo</a>,
@@ -25,11 +25,22 @@ layout: default
   <div class="note-heading">Latest note # {{ note.date | date: "%b %d, %Y" }}</div>
   {{ note.content | markdownify }}
 </div>
+{% assign note = site.data.notes[1] %}
+<div class="note">
+  <div class="note-heading">Latest note # {{ note.date | date: "%b %d, %Y" }}</div>
+  {{ note.content | markdownify }}
+</div>
 </ul>
 
 <ul class="terminal">
   <li>I <a href="/posts">write some blogs here</a>. Subscribe to them with <a href="/feed.xml">RSS</a>.</li>
 {% assign post = site.posts[0] %}
+<div class="note">
+  <div class="note-heading">Latest blog # {{ post.date | date: "%b %d, %Y" }}</div>
+  <a href="{{ post.url }}" class="small">{{ post.title }}</a>
+  {{ post.excerpt | markdownify }}
+</div>
+{% assign post = site.posts[1] %}
 <div class="note">
   <div class="note-heading">Latest blog # {{ post.date | date: "%b %d, %Y" }}</div>
   <a href="{{ post.url }}" class="small">{{ post.title }}</a>
