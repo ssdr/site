@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./js/gollum.css" media="all">
+  <link rel="stylesheet" type="text/css" href="./js/editor.css" media="all">
+  <link rel="stylesheet" type="text/css" href="./js/dialog.css" media="all">
+  <link rel="stylesheet" type="text/css" href="./js/template.css" media="all">
+  <link rel="stylesheet" type="text/css" href="./js/print.css" media="print">
+  <link rel="stylesheet" type="text/css" href="./js/custom.css" media="all">
+
+
+  <!--[if IE 7]>
+  <link rel="stylesheet" type="text/css" href="/css/ie7.css" media="all">
+  <![endif]-->
+
+  <script>
+      var baseUrl = '';
+      var uploadDest   = '';
+      var pageFullPath = 'Home';
+  </script>
+  <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="./js/mousetrap.min.js"></script>
+  <script type="text/javascript" src="./js/gollum.js"></script>
+  <script type="text/javascript" src="./js/gollum.dialog.js"></script>
+  <script type="text/javascript" src="./js/gollum.placeholder.js"></script>
+  <script type="text/javascript" src="./js/gollum.editor.js"></script>
+
+
+  <title>Home</title>
+</head>
+
+<body class="webkit">
+
+<div id="cust-site">
+  <a href="http://luajit.org/"><span>Lua<span id="cust-logo">JIT</span></span></a>
+</div>
+<div id="cust-header">
+  <h1>The LuaJIT Wiki</h1>
+</div>
+
+<div id="wiki-wrapper" class="page">
+<div id="head">
+  <h1>Home</h1>
+</div>
+<div id="wiki-content">
+<div class=" has-toc">
+  <div id="wiki-toc-main">
+    <div class="toc"><div class="toc-title">Table of Contents</div><ul><ul><li><a href="Home.html#luajit-extensions">LuaJIT Extensions</a></li></ul></ul><ul><ul><li><a href="Home.html#performance-tuning-and-testing">Performance Tuning and Testing</a></li></ul></ul><ul><ul><li><a href="Home.html#luajit-internals">LuaJIT Internals</a></li></ul></ul><ul><ul><li><a href="Home.html#system-integration">System Integration</a></li></ul></ul><ul><ul><li><a href="Home.html#about-the-luajit-wiki">About the LuaJIT Wiki</a></li></ul></ul></div>
+  </div>
+  <div id="wiki-body" class="gollum-markdown-content">
+    <div class="markdown-body">
+      <pre class="highlight"><code><span class="kd">local</span> <span class="n">ffi</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">"ffi"</span><span class="p">)</span>
+<span class="n">ffi</span><span class="p">.</span><span class="n">cdef</span><span class="s">[[int printf(const char *fmt, ...);]]</span>
+<span class="n">ffi</span><span class="p">.</span><span class="n">C</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s2">"Hello %s!\n"</span><span class="p">,</span> <span class="s2">"wiki"</span><span class="p">)</span></code></pre>
+
+
+<p>The LuaJIT wiki has been created to gather community resources about
+developing programs using LuaJIT. Everyone is welcome to contribute
+relevant material -- please refer to the <a class="internal present" href="http://wiki.luajit.org/Wiki-FAQ">Wiki FAQ</a> for details.</p>
+
+<h1>Directory of Content</h1>
+
+<h2><a class="anchor" id="luajit-extensions" href="http://wiki.luajit.org/Home#luajit-extensions"><i class="fa fa-link"></i></a>LuaJIT Extensions</h2>
+
+<ul>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/FFI-Bindings">FFI Bindings</a> - A list of available FFI bindings</li>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/FFI-Native-Libraries">FFI Native Libraries</a> - Pure Lua libraries leveraging FFI</li>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/FFI-Parameterized-Types">FFI Parameterized Types</a> - Examples for the FFI Parameterized Type Feature</li>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/FFI-Callback-Restrictions%3A-Encountered-Cases">FFI Callback Restrictions: Encountered Cases</a> - Known restritions of FFI Callbacks</li>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/FFI-Callbacks-with-pass-by-value-structs">FFI Callbacks with pass by value structs</a> - Example for making FFI Callbacks with pass by value structs</li>
+<li><a class="internal present" href="http://wiki.luajit.org/ffi-knowledge">FFI Knowledge</a></li>
+</ul>
+
+<h2><a class="anchor" id="performance-tuning-and-testing" href="Home.html#performance-tuning-and-testing"><i class="fa fa-link"></i></a>Performance Tuning and Testing</h2>
+
+<ul>
+<li>
+<a class="internal present" href="NYI.html">NYI</a> - Things which are likely to cause NYI aborts from the JIT compiler</li>
+<li>
+<a class="internal present" href="Reducing-Testcases.html">Reducing Testcases</a> - Hints for reducing the size of test cases</li>
+<li>
+<a class="internal present" href="Numerical-Computing-Performance-Guide.html">Numerical Computing Performance Guide</a> - Tips for writing performant Lua code</li>
+</ul>
+
+<h2><a class="anchor" id="luajit-internals" href="Home.html#luajit-internals"><i class="fa fa-link"></i></a>LuaJIT Internals</h2>
+
+<ul>
+<li>
+<a class="internal present" href="Bytecode-2.0.html">Bytecode 2.0</a> - LuaJIT 2.0 Bytecode reference</li>
+<li>
+<a class="internal present" href="SSA-IR-2.0.html">SSA IR 2.0</a> - LuaJIT 2.0 SSA IR reference</li>
+<li>
+<a class="internal present" href="Optimizations.html">Optimizations</a> - Optimizations performed by LuaJIT</li>
+<li>
+<a class="internal present" href="JIT-Compiler-API.html">JIT Compiler API</a> - The jit.* API allows to control/watch the JIT compiler</li>
+<li>
+<a class="internal present" href="New-Garbage-Collector.html">New Garbage Collector</a> - Design of the new garbage collector for LuaJIT 3.0</li>
+<li>
+<a class="internal present" href="Allocation-Sinking-Optimization.html">Allocation Sinking Optimization</a> - Design of allocation optimizations used in LuaJIT 2.0</li>
+<li><a class="internal present" href="DynASM-API.html">DynASM API Documentation</a></li>
+<li>
+<a class="internal present" href="Extended-BNF.html">Extended BNF</a> - The Complete Syntax of LuaJIT including FFI literals and Lua 5.2 extensions</li>
+</ul>
+
+<h2><a class="anchor" id="system-integration" href="http://wiki.luajit.org/Home#system-integration"><i class="fa fa-link"></i></a>System Integration</h2>
+
+<ul>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/Linux-binfmt_misc">Linux binfmt_misc</a> - Running LuaJIT compiled bytecode "directly" using binfmt_misc kernel feature</li>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/where-luajit-is-used">Where LuaJIT Is Used</a> - Directory of projects that embed LuaJIT</li>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/architecture-support">Architecture Support</a> - Informations about running LuaJIT on different architectures</li>
+</ul>
+
+<h2><a class="anchor" id="about-the-luajit-wiki" href="http://wiki.luajit.org/Home#about-the-luajit-wiki"><i class="fa fa-link"></i></a>About the LuaJIT Wiki</h2>
+
+<ul>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/Wiki-FAQ">Wiki FAQ</a> - Frequently Asked Questions about the wiki</li>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/Wiki-Wishlist">Wiki Wishlist</a> - Wishlist for the wiki</li>
+<li>
+<a class="internal present" href="http://wiki.luajit.org/Test">Test</a> - Testing ground for the wiki and wiki text formatting</li>
+</ul>
+
+    </div>
+  </div>
+  </div>
+
+</div>
+<div id="footer">
+  <p id="last-edit">Last edited by <b>Spar (GitSparTV)</b>, 2020-07-26 15:57:49</p>
+    <p>
+      <a id="delete-link" href="http://wiki.luajit.org/Home" data-confirm="Are you sure you want to delete this page?"><span>Delete this Page</span></a>
+    </p>
+</div>
+</div>
+
+<form name="rename" method="POST" action="http://wiki.luajit.org/rename/Home">
+  <input type="hidden" name="rename">
+  <input type="hidden" name="message">
+</form>
+
+</body></html>
