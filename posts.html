@@ -2,6 +2,9 @@
 layout: default
 title: Blogs
 ---
+
+<summary><h2 class="as-text"><a href="/luajit-wiki/Home">Luajit wiki</a></h2></summary>
+
 <summary><h2 class="as-text">Nginx</h2></summary>
   <ul class="note">
     {% for post in site.posts %}
@@ -13,17 +16,6 @@ title: Blogs
     {% endfor %}
     {% for post in site.posts %}
       {% if post.category == 'Nginx' and post.title != 'Nginx文档【持续更新】' %}
-          <li id="date-{{ post.date | date: "%Y-%m-%d" }}{{ post.slug }}">
-            <time class="small">{{ post.date | date: "%b %d, %Y" }}</time> <a href="{{ post.url }}" class="small">{{post.title}}</a>
-          </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-<summary><h2 class="as-text">Manual</h2></summary>
-  <ul class="note">
-    {% for post in site.posts %}
-      {% if post.category == 'manual' %}
           <li id="date-{{ post.date | date: "%Y-%m-%d" }}{{ post.slug }}">
             <time class="small">{{ post.date | date: "%b %d, %Y" }}</time> <a href="{{ post.url }}" class="small">{{post.title}}</a>
           </li>

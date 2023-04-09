@@ -6,19 +6,17 @@ layout: default
 <ul class="terminal">
   <li>I am based in Beijing since 2013.</li>
   <li>
-    You can catch me at:
-    <a href="/wechat" ref="me">Wechat</a>,
-    <a href="https://github.com/ssdr" rel="me">GitHub</a>,
-    <a href="https://twitter.com/ssdrliu" rel="me">Twitter</a>,
-    <a href="https://weibo.com/ssdrliu" rel="me">Weibo</a>,
-    or ssdrliu at gmail.com.
+    <a href="/wechat" ref="me">Wechat</a> /
+    <a href="https://github.com/ssdr" rel="me">GitHub</a> /
+    <a href="https://twitter.com/ssdrliu" rel="me">Twitter</a> /
+    <a href="https://weibo.com/ssdrliu" rel="me">Weibo</a> /
+    ssdrliu at gmail.com.
   </li>
-  <li>I play <a href="/football">football</a> sometimes.</li>
   <li>Here are some <a href="/photos">Photos</a>.</li>
 </ul>
 
 <ul class="terminal">
-  <li>I <a href="/notes">write random notes here</a>. Subscribe to them with <a href="/notes.xml">RSS</a>.</li>
+  <li><a href="/notes">Notes</a> <a href="/notes.xml">RSS</a></li>
 {% assign note = site.data.notes[0] %}
 <div class="note">
   <div class="note-heading">Latest note # {{ note.date | date: "%b %d, %Y" }}</div>
@@ -32,7 +30,7 @@ layout: default
 </ul>
 
 <ul class="terminal">
-  <li>I <a href="/posts">write some blogs here</a>. Subscribe to them with <a href="/feed.xml">RSS</a>.</li>
+  <li><a href="/posts">Blogs</a> <a href="/feed.xml">RSS</a></li>
 {% assign post = site.posts[0] %}
 <div class="note">
   <div class="note-heading">Latest blog # {{ post.date | date: "%b %d, %Y" }}</div>
@@ -47,6 +45,3 @@ layout: default
 </div>
 </ul>
 
-<ul class="terminal">
-  <li>This is a <a href="/luajit-wiki/Home">mirror of luajit wiki site</a>.</li>
-</ul>
