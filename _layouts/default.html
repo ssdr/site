@@ -15,7 +15,7 @@
       <meta content="{{ page.content | strip_html | strip_newlines | truncate: 120 }}" name="description">
       <meta content="article" property="og:type">
       {% if page.image %}
-        <meta content="http://damian.life/images/{{ page.image }}" property="og:image">
+      <meta content="{{ site.url }}/images/{{ page.image }}" property="og:image">
       {% endif %}
       <title>{{ page.title }} - {{ site.title }}</title>
     {% else %}

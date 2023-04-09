@@ -1,6 +1,6 @@
-title:            damian's life
-description:      who is damian
-url:              https://damian.life
+title:            Damian Liu
+description:      Damian's home page on the World Wide Web.
+url:              https://yanl.cc
 
 permalink:        pretty
 timezone:         Asia/Shanghai
@@ -23,4 +23,3 @@ defaults:
       path: "images/*.*"
     values:
       image: true
-

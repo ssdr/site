@@ -1,5 +1,5 @@
 # 牧童的网络博客
-:hearts: [https://damian.life](https://damian.life)
+:hearts: [https://yanl.cc](https://yank.cc)
 
 :spades: [Github Blog](https://github.com/ssdr/blog/blob/master/posts/readme.md)
 
