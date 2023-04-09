@@ -29,9 +29,14 @@
       <h1 class="h1">
         {{ page.title }}<span class="blink">|</span>
       </h1>
+      {% if page.root == true %}
+<!-- disqus comments
+        <div class="desc" data-status-loading><span data-status-text></span> <span data-status-datetime></span></div>
+-->
+      {% endif %}
       {% if page.date %}<small>{{ page.date | date_to_string }}</small><br>{% endif %}
       {% if page.path != 'index.html' %}
-        <small><a href="/"> $ cd ~</a></small>
+        <a href="/{% if page.collection == "posts" %}posts{% endif %}" aria-label="Home" class="back-link">&leftarrow;</a>
       {% endif %}
     </header>
     <main>
@@ -66,9 +71,12 @@
 {% endif %}
 
 <span id="busuanzi_container_site_uv">
-    本站访客数<span id="busuanzi_value_site_uv"></span>人次。
+    本站访客数<span id="busuanzi_value_site_uv"></span>
 </span>
 
+<div>
+<span data-timestamp-text="{time}"></span>
+</div>
     </main>
 
     <link href="/assets/new.css" rel="stylesheet" type="text/css">
@@ -76,6 +84,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cousine&display=swap" rel="stylesheet">
 
 <script src="/assets/prism.js"></script>
+<script defer type="module" src="/assets/site.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118678203-1"></script>

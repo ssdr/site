@@ -112,7 +112,7 @@ blockquote {
 img {
   max-width: 100%;
   margin: 1em 0;
-  
+
   &[width] {
     margin: 0;
     vertical-align: middle;
@@ -133,3 +133,129 @@ article {
   font-family: system-ui, sans-serif;
   font-size: 16px;
 }
+
+.back-link {
+  text-decoration: none;
+  color: var(--textColor);
+  background-color: var(--langBackgroundColor);
+  width: 1.6em;
+  text-align: center;
+  line-height: 1.6em;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  border-radius:  4em;
+}
+
+[data-status-loading] {
+  margin: .17em 0 0;
+  display: block;
+  opacity: .3;
+  animation: loading .5s infinite alternate;
+
+  [data-status-text]:empty {
+    display: inline-block;
+    width: 100px;
+    height: 1em;
+    border-radius: .3em;
+    background: var(--subtleBackgroundColor);
+  }
+}
+
+.lang {
+  font-size: .8rem;
+  display: inline-flex;
+  margin-top: 2em;
+  white-space: nowrap;
+  box-shadow: 0 5px 15px var(--langShadowColor);
+
+  a[aria-current] {
+    color: var(--textColor);
+
+    &:before {
+      content: "●";
+      color: var(--activeColor);
+    }
+  }
+
+  a {
+    background-color: var(--langBackgroundColor);
+    border-color: var(--borderColor);
+    color: var(--mutedTextColor);
+    padding: 4px 16px;
+    margin-right: 1px;
+    text-decoration: none;
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    &:hover {
+      background: var(--langBackgroundColor);
+    }
+
+    &:focus {
+      z-index: 1;
+    }
+
+    &:before {
+      content: "○";
+      color: var(--borderColor);
+      padding-right: 10px;
+    }
+  }
+}
+
+.styled-link {
+  margin-left: .4rem;
+  font-size: .7em;
+}
+
+time {
+  font-size: .8em;
+  color: var(--mutedTextColor);
+}
+
+.desc {
+  color: var(--mutedTextColor);
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.timestamp-colon {
+  animation-name: flash;
+  animation-duration:  2s;
+  animation-timing-function: step-end;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timestamp-colon {
+    animation-name: none;
+  }
+}
+
+.offsetthis {
+  vertical-align: super;
+  font-size: .6em;
+}
+

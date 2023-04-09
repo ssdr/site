@@ -9,6 +9,7 @@ sass:
   style: :compressed
 collections:
   - notes
+  - posts
 
 defaults:
   -
