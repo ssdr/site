@@ -7,7 +7,8 @@ tags: nginx
 
 ## nginx源码
 ### 目录结构
-```
+
+```c
 .
 ├── auto            自动检测系统环境以及编译相关的脚本
 │   ├── cc          关于编译器相关的编译选项的检测脚本
@@ -28,6 +29,7 @@ tags: nginx
     ├── misc        一些辅助代码，测试c++头的兼容性，以及对google_perftools的支持
     └── os          主要是对各种不同体系统结构所提供的系统函数的封装，对外提供统一的系统调用接口
 ```
+
 ### auto
 `auto/options`的目的主要是处理用户选项，并由选项生成一些全局变量的值，这些值在其它文件中会用到。该文件也会输出configure的帮助信息。   
 
@@ -95,21 +97,17 @@ tags: nginx
 
 默认情况下，`access_log` 会使用 combined 的配置来记录访问日志
 
+```c
     log_format combined '$remote_addr - $remote_user [$time_local]  '
                '"$request" $status $body_bytes_sent '
                '"$http_referer" "$http_user_agent"';
-
-日志通过\^A分割
-
-    log_format abc "$remote_addr^A$remote_user^A$time_local^A$request_method^A$uri^A$args^A$server_protocol"
-            "^A$status^A$body_bytes_sent^A$http_referer"
-            "^A$http_user_agent";
+```
 
 `ngx_errlog_module`为其他模块提供基本的记录日志功能。
 
 ## ngx_module_t内容
 
-```
+```c
 ngx_module_t *ngx_modules[] = {
     // 全局core模块
     &ngx_core_module,
