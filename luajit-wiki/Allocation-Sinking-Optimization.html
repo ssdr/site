@@ -3,7 +3,7 @@
   <meta name="MobileOptimized" content="width">
   <meta name="HandheldFriendly" content="true">
   <meta name="viewport" content="width=device-width">
-  <link rel="”alternate”" type="”application/rss+xml”" title="”wiki.luajit.org" edit="" and="" commit="" log”="" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/%E2%80%9Dhttp://wiki.luajit.org/feeds/global.xml%E2%80%9D">
+  <link rel="”alternate”" type="”application/rss+xml”" title="”wiki.luajit.org" edit="" and="" commit="" log”="" href="http://wiki.luajit.org/%E2%80%9Dhttp://wiki.luajit.org/feeds/global.xml%E2%80%9D">
   <link rel="stylesheet" type="text/css" href="./js/gollum.css" media="all">
   <link rel="stylesheet" type="text/css" href="./js/editor.css" media="all">
   <link rel="stylesheet" type="text/css" href="./js/dialog.css" media="all">
@@ -34,10 +34,10 @@
 
 <body class="webkit">
 <div id="cust-site">
-  <a href="https://web.archive.org/web/20220519142742/http://luajit.org/"><span>Lua<span id="cust-logo">JIT</span></span></a>
+  <a href="/"><span>牧童<span id="cust-logo">Damian</span></span></a>
 </div>
 <div id="cust-header">
-  <h1>The LuaJIT Wiki</h1>
+    <h1><a href="/luajit-wiki/Home"><span>Lua<span id="cust-logo">JIT</span> Wiki</span></a></h1>
 </div>
 <div id="wiki-wrapper" class="page">
 <div id="head">
@@ -46,13 +46,13 @@
 <div id="wiki-content">
 <div class=" has-toc">
   <div id="wiki-toc-main">
-    <div class="toc"><div class="toc-title">Table of Contents</div><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#introduction">Introduction</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#rationale">Rationale</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#motivating-example">Motivating Example</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#the-goal">The Goal</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#the-missing-details">The Missing Details</a></li></ul></ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples">Examples</a></li></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_motivating-example-again">Motivating Example Again</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_re-sinking">Re-Sinking</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class">Point Class</a></li></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class_point-class-with-lua-tables">Point Class With Lua Tables</a></li></ul></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class_point-class-with-ffi-cdata-struct">Point Class With FFI cdata struct</a></li></ul></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class_point-class-in-c-and-java">Point Class in C++ and Java</a></li></ul></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class_point-class-benchmarks">Point Class Benchmarks</a></li></ul></ul></ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation">Implementation</a></li></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_sink-optimization-pass">SINK Optimization Pass</a></li></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_sink-optimization-pass_mark-phase">Mark Phase</a></li></ul></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_sink-optimization-pass_sweep-phase">Sweep Phase</a></li></ul></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_assembler-backend">Assembler Backend</a></li></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_assembler-backend_snapshot-allocations">Snapshot Allocations</a></li></ul></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_assembler-backend_sunk-instructions">Sunk Instructions</a></li></ul></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_snapshot-handling">Snapshot Handling</a></li></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_snapshot-handling_snapshot-restore">Snapshot Restore</a></li></ul></ul></ul><ul><ul><ul><li><a href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_snapshot-handling_snapshot-replay">Snapshot Replay</a></li></ul></ul></ul></div>
+    <div class="toc"><div class="toc-title">Table of Contents</div><ul><ul><li><a href="Allocation-Sinking-Optimization#introduction">Introduction</a></li></ul></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#rationale">Rationale</a></li></ul></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#motivating-example">Motivating Example</a></li></ul></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#the-goal">The Goal</a></li></ul></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#the-missing-details">The Missing Details</a></li></ul></ul><ul><li><a href="Allocation-Sinking-Optimization#examples">Examples</a></li></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#examples_motivating-example-again">Motivating Example Again</a></li></ul></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#examples_re-sinking">Re-Sinking</a></li></ul></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#examples_point-class">Point Class</a></li></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#examples_point-class_point-class-with-lua-tables">Point Class With Lua Tables</a></li></ul></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#examples_point-class_point-class-with-ffi-cdata-struct">Point Class With FFI cdata struct</a></li></ul></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#examples_point-class_point-class-in-c-and-java">Point Class in C++ and Java</a></li></ul></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#examples_point-class_point-class-benchmarks">Point Class Benchmarks</a></li></ul></ul></ul><ul><li><a href="Allocation-Sinking-Optimization#implementation">Implementation</a></li></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_sink-optimization-pass">SINK Optimization Pass</a></li></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_sink-optimization-pass_mark-phase">Mark Phase</a></li></ul></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_sink-optimization-pass_sweep-phase">Sweep Phase</a></li></ul></ul></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_assembler-backend">Assembler Backend</a></li></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_assembler-backend_snapshot-allocations">Snapshot Allocations</a></li></ul></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_assembler-backend_sunk-instructions">Sunk Instructions</a></li></ul></ul></ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_snapshot-handling">Snapshot Handling</a></li></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_snapshot-handling_snapshot-restore">Snapshot Restore</a></li></ul></ul></ul><ul><ul><ul><li><a href="Allocation-Sinking-Optimization#implementation_snapshot-handling_snapshot-replay">Snapshot Replay</a></li></ul></ul></ul></div>
   </div>
   <div id="wiki-body" class="gollum-markdown-content">
     <div class="markdown-body">
 
 
-<h2><a class="anchor" id="introduction" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#introduction"><i class="fa fa-link"></i></a>Introduction</h2>
+<h2><a class="anchor" id="introduction" href="Allocation-Sinking-Optimization#introduction"><i class="fa fa-link"></i></a>Introduction</h2>
 
 <p>The <strong>Allocation Sinking and Store Sinking Optimization</strong> was added
 to LuaJIT 2.0 in July 2012. This page documents the rationale for this
@@ -60,7 +60,7 @@ optimization, the algorithm used and its implementation. The resulting
 performance is discussed and compared to other languages, too.</p>
 
 <p>The research and the development of this optimization has been sponsored
-by an anonymous corporate <a href="https://web.archive.org/web/20220519142742/http://luajit.org/sponsors.html">sponsor</a> in
+by an anonymous corporate <a href="http://luajit.org/sponsors.html">sponsor</a> in
 2012.</p>
 
 <p>Although this optimization is based on other well-known techniques, the
@@ -68,12 +68,12 @@ combination may be considered innovative. I (Mike Pall) hereby donate
 the related intellectual property to the public domain. If you find it
 useful, please use it and share it!</p>
 
-<h2><a class="anchor" id="rationale" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#rationale"><i class="fa fa-link"></i></a>Rationale</h2>
+<h2><a class="anchor" id="rationale" href="Allocation-Sinking-Optimization#rationale"><i class="fa fa-link"></i></a>Rationale</h2>
 
 <p>Avoiding temporary allocations is an important optimization for
 high-level languages. Allocations are expensive and cause additional
 overhead since they need to be garbage collected later. The cost can be
-reduced with considerable effort (cf. the <a class="internal present" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/New-Garbage-Collector">New Garbage Collector</a>),
+reduced with considerable effort (cf. the <a class="internal present" href="http://wiki.luajit.org/New-Garbage-Collector">New Garbage Collector</a>),
 but an eliminated allocation is always the cheapest option.</p>
 
 <p>LuaJIT already eliminates many temporary allocations with multiple
@@ -89,7 +89,7 @@ dynamic typing. Sadly, this means that almost any object inevitably
 escapes through at least one of these uncommon code paths. This makes
 the traditional techniques ineffective for dynamic languages.</p>
 
-<h2><a class="anchor" id="motivating-example" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#motivating-example"><i class="fa fa-link"></i></a>Motivating Example</h2>
+<h2><a class="anchor" id="motivating-example" href="Allocation-Sinking-Optimization#motivating-example"><i class="fa fa-link"></i></a>Motivating Example</h2>
 
 <p>For explanatory purposes, the following synthetic example has an
 explicit code path where the allocation escapes to. Of course, the same
@@ -200,7 +200,7 @@ IR for the hand-optimized Lua code is very different:</p>
 <p>The allocation and the related store is gone from the fast path of the
 loop, which means it'll run much faster!</p>
 
-<h2><a class="anchor" id="the-goal" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#the-goal"><i class="fa fa-link"></i></a>The Goal</h2>
+<h2><a class="anchor" id="the-goal" href="Allocation-Sinking-Optimization#the-goal"><i class="fa fa-link"></i></a>The Goal</h2>
 
 <p>The main innovation of the approach described above is to combine
 store-to-load-forwarding with store sinking and allocation sinking. This
@@ -223,7 +223,7 @@ spill slots. However, the layout of spill slots does not need to match
 the layout of an allocated object (nor is it suitable to be passed to a
 C function expecting such an object).</p>
 
-<h2><a class="anchor" id="the-missing-details" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#the-missing-details"><i class="fa fa-link"></i></a>The Missing Details</h2>
+<h2><a class="anchor" id="the-missing-details" href="Allocation-Sinking-Optimization#the-missing-details"><i class="fa fa-link"></i></a>The Missing Details</h2>
 
 <p>The above example is greatly simplified, of course. In practice, an
 allocation may escape to more than one snapshot or to more than one
@@ -246,13 +246,13 @@ course.</p>
 for Lua tables. Temporary allocations of mutable and immutable FFI
 objects are common, too.</p>
 
-<h1><a class="anchor" id="examples" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples"><i class="fa fa-link"></i></a>Examples</h1>
+<h1><a class="anchor" id="examples" href="Allocation-Sinking-Optimization#examples"><i class="fa fa-link"></i></a>Examples</h1>
 
 <p>The exact algorithm used for this optimization is explained in the
 implementation section below. For better understanding, this section
 shows the results of the optimization for a range of examples.</p>
 
-<h2><a class="anchor" id="examples_motivating-example-again" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_motivating-example-again"><i class="fa fa-link"></i></a>Motivating Example Again</h2>
+<h2><a class="anchor" id="examples_motivating-example-again" href="Allocation-Sinking-Optimization#examples_motivating-example-again"><i class="fa fa-link"></i></a>Motivating Example Again</h2>
 
 <p>Here's the motivating example again plus the IR and the machine code for
 the loop part with the sinking optimization turned on:</p>
@@ -306,7 +306,7 @@ summation of <code>x</code> and the loop increment plus boundary check.</p>
 <p>[Note: the <code>xorps</code> avoids a partial-register-write stall for the SSE2
 conversion instruction.]</p>
 
-<h2><a class="anchor" id="examples_re-sinking" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_re-sinking"><i class="fa fa-link"></i></a>Re-Sinking</h2>
+<h2><a class="anchor" id="examples_re-sinking" href="Allocation-Sinking-Optimization#examples_re-sinking"><i class="fa fa-link"></i></a>Re-Sinking</h2>
 
 <p>Here's an example that shows how a sunk allocation is sunk again in a
 side trace:</p>
@@ -374,13 +374,13 @@ replayed before the first snapshot. Then it's sunk again:</p>
 prevent implicit GC steps before the first snapshot. It's really a no-op
 here, since no allocations are performed.]</p>
 
-<h2><a class="anchor" id="examples_point-class" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class"><i class="fa fa-link"></i></a>Point Class</h2>
+<h2><a class="anchor" id="examples_point-class" href="Allocation-Sinking-Optimization#examples_point-class"><i class="fa fa-link"></i></a>Point Class</h2>
 
 <p>Here's a practical example of a higher language abstraction: a
 (simplified) 'point' class. It needs to create temporary objects as part
 of arithmetic operations on point objects.</p>
 
-<h3><a class="anchor" id="examples_point-class_point-class-with-lua-tables" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class_point-class-with-lua-tables"><i class="fa fa-link"></i></a>Point Class With Lua Tables</h3>
+<h3><a class="anchor" id="examples_point-class_point-class-with-lua-tables" href="Allocation-Sinking-Optimization#examples_point-class_point-class-with-lua-tables"><i class="fa fa-link"></i></a>Point Class With Lua Tables</h3>
 
 <p>First, the version for plain Lua tables:</p>
 
@@ -419,7 +419,7 @@ allowed to transform <code>(a+b)+b</code> into <code>a+(b+b)</code> and then hoi
 computation of <code>b+b</code>. It really needs two FP additions per component for
 a total of four SSE2 <code>addsd</code> instructions per loop iteration.]</p>
 
-<h3><a class="anchor" id="examples_point-class_point-class-with-ffi-cdata-struct" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class_point-class-with-ffi-cdata-struct"><i class="fa fa-link"></i></a>Point Class With FFI cdata struct</h3>
+<h3><a class="anchor" id="examples_point-class_point-class-with-ffi-cdata-struct" href="Allocation-Sinking-Optimization#examples_point-class_point-class-with-ffi-cdata-struct"><i class="fa fa-link"></i></a>Point Class With FFI cdata struct</h3>
 
 <pre class="highlight"><code><span class="kd">local</span> <span class="n">ffi</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">"ffi"</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">point</span>
@@ -437,7 +437,7 @@ a total of four SSE2 <code>addsd</code> instructions per loop iteration.]</p>
 similar example with immutable 'complex' cdata objects generates the
 same code, too.</p>
 
-<h3><a class="anchor" id="examples_point-class_point-class-in-c-and-java" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class_point-class-in-c-and-java"><i class="fa fa-link"></i></a>Point Class in C++ and Java</h3>
+<h3><a class="anchor" id="examples_point-class_point-class-in-c-and-java" href="Allocation-Sinking-Optimization#examples_point-class_point-class-in-c-and-java"><i class="fa fa-link"></i></a>Point Class in C++ and Java</h3>
 
 <p>For comparison, here's the same point class implemented in C++:</p>
 
@@ -493,7 +493,7 @@ basically the same as the code LuaJIT generates.</p>
 option <code>-XX:+DoEscapeAnalysis</code> doesn't change anything. Moving the loop
 to a separate method or using an outer loop doesn't help either.</p>
 
-<h3><a class="anchor" id="examples_point-class_point-class-benchmarks" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#examples_point-class_point-class-benchmarks"><i class="fa fa-link"></i></a>Point Class Benchmarks</h3>
+<h3><a class="anchor" id="examples_point-class_point-class-benchmarks" href="Allocation-Sinking-Optimization#examples_point-class_point-class-benchmarks"><i class="fa fa-link"></i></a>Point Class Benchmarks</h3>
 
 <p>Here's the runtime for the point class in seconds (YMMV). Lower is
 better:</p>
@@ -557,13 +557,13 @@ this simple example, scaling the loop iterations up yields consistent
 results. The code generated by LuaJIT and C++ <em>really</em> has the same
 performance.]</p>
 
-<h1><a class="anchor" id="implementation" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation"><i class="fa fa-link"></i></a>Implementation</h1>
+<h1><a class="anchor" id="implementation" href="Allocation-Sinking-Optimization#implementation"><i class="fa fa-link"></i></a>Implementation</h1>
 
 <p>Different parts of the JIT-compiler are involved in handling allocation
 sinking and store sinking. The following subsections describe the
 required additions and changes to the implementation.</p>
 
-<h2><a class="anchor" id="implementation_sink-optimization-pass" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_sink-optimization-pass"><i class="fa fa-link"></i></a>SINK Optimization Pass</h2>
+<h2><a class="anchor" id="implementation_sink-optimization-pass" href="Allocation-Sinking-Optimization#implementation_sink-optimization-pass"><i class="fa fa-link"></i></a>SINK Optimization Pass</h2>
 
 <p>The SINK optimization pass is only invoked, if:</p>
 
@@ -583,7 +583,7 @@ like a classic mark &amp; sweep garbage collection algorithm:</p>
 as sunk.</li>
 </ul>
 
-<h3><a class="anchor" id="implementation_sink-optimization-pass_mark-phase" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_sink-optimization-pass_mark-phase"><i class="fa fa-link"></i></a>Mark Phase</h3>
+<h3><a class="anchor" id="implementation_sink-optimization-pass_mark-phase" href="Allocation-Sinking-Optimization#implementation_sink-optimization-pass_mark-phase"><i class="fa fa-link"></i></a>Mark Phase</h3>
 
 <p>The mark phase is a single-pass backward propagation algorithm.
 Initially, the marks of all IR instructions are clear. Then the roots
@@ -623,7 +623,7 @@ marks converge.</p>
 <p>After this pass is complete, the allocations that are unmarked are
 considered safe to be sunk.</p>
 
-<h3><a class="anchor" id="implementation_sink-optimization-pass_sweep-phase" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_sink-optimization-pass_sweep-phase"><i class="fa fa-link"></i></a>Sweep Phase</h3>
+<h3><a class="anchor" id="implementation_sink-optimization-pass_sweep-phase" href="Allocation-Sinking-Optimization#implementation_sink-optimization-pass_sweep-phase"><i class="fa fa-link"></i></a>Sweep Phase</h3>
 
 <p>The sweep phase is a single-pass through the IR instructions:</p>
 
@@ -650,12 +650,12 @@ large). This can be used as a quick test when traversing the IR in
 search of related stores (see below).</li>
 </ul>
 
-<h2><a class="anchor" id="implementation_assembler-backend" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_assembler-backend"><i class="fa fa-link"></i></a>Assembler Backend</h2>
+<h2><a class="anchor" id="implementation_assembler-backend" href="Allocation-Sinking-Optimization#implementation_assembler-backend"><i class="fa fa-link"></i></a>Assembler Backend</h2>
 
 <p>The assembler backend translates the IR to machine code. It needs to
 know about sunk instructions to avoid generating machine code for them.</p>
 
-<h3><a class="anchor" id="implementation_assembler-backend_snapshot-allocations" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_assembler-backend_snapshot-allocations"><i class="fa fa-link"></i></a>Snapshot Allocations</h3>
+<h3><a class="anchor" id="implementation_assembler-backend_snapshot-allocations" href="Allocation-Sinking-Optimization#implementation_assembler-backend_snapshot-allocations"><i class="fa fa-link"></i></a>Snapshot Allocations</h3>
 
 <p>The first encountered guard that needs to add an exit for a snapshot
 calls a special routine that prepares the current snapshot. Every
@@ -681,7 +681,7 @@ snapshot further up.</p>
 integer-to-number conversion instead of the conversion itself. This
 effectively sinks conversions and removes them from the fast path.</p>
 
-<h3><a class="anchor" id="implementation_assembler-backend_sunk-instructions" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_assembler-backend_sunk-instructions"><i class="fa fa-link"></i></a>Sunk Instructions</h3>
+<h3><a class="anchor" id="implementation_assembler-backend_sunk-instructions" href="Allocation-Sinking-Optimization#implementation_assembler-backend_sunk-instructions"><i class="fa fa-link"></i></a>Sunk Instructions</h3>
 
 <p>A sunk allocation instruction has its register set to RID_SINK or
 RID_SUNK and a zero (unused) spill slot. The result is thus considered
@@ -698,7 +698,7 @@ handler to not emit any code.</p>
 <p>Sunk <code>PHI</code> instructions need the same check to avoid allocating a
 register or spill slot for the referenced allocations.</p>
 
-<h2><a class="anchor" id="implementation_snapshot-handling" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_snapshot-handling"><i class="fa fa-link"></i></a>Snapshot Handling</h2>
+<h2><a class="anchor" id="implementation_snapshot-handling" href="Allocation-Sinking-Optimization#implementation_snapshot-handling"><i class="fa fa-link"></i></a>Snapshot Handling</h2>
 
 <p>Snapshots hold the execution state from the view of the bytecode
 interpreter at selected points in a trace. Sunk allocations and sunk
@@ -706,7 +706,7 @@ conversions are not actually executed on-trace and thus do not generate
 a value. However, the stored values (or input values for conversions)
 <em>are</em> computed and can be used to restore or replay a snapshot.</p>
 
-<h3><a class="anchor" id="implementation_snapshot-handling_snapshot-restore" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_snapshot-handling_snapshot-restore"><i class="fa fa-link"></i></a>Snapshot Restore</h3>
+<h3><a class="anchor" id="implementation_snapshot-handling_snapshot-restore" href="Allocation-Sinking-Optimization#implementation_snapshot-handling_snapshot-restore"><i class="fa fa-link"></i></a>Snapshot Restore</h3>
 
 <p>A taken side exit that has no attached side trace (yet) needs to restore
 the Lua stack to a sane state. The snapshot corresponding to the exit
@@ -729,7 +729,7 @@ always constant, so they can be reconstructed solely from the IR.</p>
 allocation may escape to more than one stack slot and all of them must
 refer to the same object.</p>
 
-<h3><a class="anchor" id="implementation_snapshot-handling_snapshot-replay" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization#implementation_snapshot-handling_snapshot-replay"><i class="fa fa-link"></i></a>Snapshot Replay</h3>
+<h3><a class="anchor" id="implementation_snapshot-handling_snapshot-replay" href="Allocation-Sinking-Optimization#implementation_snapshot-handling_snapshot-replay"><i class="fa fa-link"></i></a>Snapshot Replay</h3>
 
 <p>The IR for a side trace needs to start with the instructions that link
 to the parent values included in the snapshot. The <code>SLOAD</code> instruction
@@ -769,12 +769,12 @@ passes two and three are only performed when needed.]</p>
 <div id="footer">
   <p id="last-edit">Last edited by <b>Arran Cudbard-Bell (arr2036)</b>, 2014-03-29 23:38:05</p>
     <p>
-      <a id="delete-link" href="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/Allocation-Sinking-Optimization" data-confirm="Are you sure you want to delete this page?"><span>Delete this Page</span></a>
+      <a id="delete-link" href="Allocation-Sinking-Optimization" data-confirm="Are you sure you want to delete this page?"><span>Delete this Page</span></a>
     </p>
 </div>
 </div>
 
-<form name="rename" method="POST" action="https://web.archive.org/web/20220519142742/http://wiki.luajit.org/rename/Allocation-Sinking-Optimization">
+<form name="rename" method="POST" action="http://wiki.luajit.org/rename/Allocation-Sinking-Optimization">
   <input type="hidden" name="rename">
   <input type="hidden" name="message">
 </form>

@@ -3,7 +3,7 @@
   <meta name="MobileOptimized" content="width">
   <meta name="HandheldFriendly" content="true">
   <meta name="viewport" content="width=device-width">
-  <link rel="”alternate”" type="”application/rss+xml”" title="”wiki.luajit.org" edit="" and="" commit="" log”="" href="https://web.archive.org/web/20210416200336/http://wiki.luajit.org/%E2%80%9Dhttp://wiki.luajit.org/feeds/global.xml%E2%80%9D">
+  <link rel="”alternate”" type="”application/rss+xml”" title="”wiki.luajit.org" edit="" and="" commit="" log”="" href="http://wiki.luajit.org/%E2%80%9Dhttp://wiki.luajit.org/feeds/global.xml%E2%80%9D">
   <link rel="stylesheet" type="text/css" href="./js/gollum.css" media="all">
   <link rel="stylesheet" type="text/css" href="./js/editor.css" media="all">
   <link rel="stylesheet" type="text/css" href="./js/dialog.css" media="all">
@@ -34,10 +34,10 @@
 
 <body class="webkit">
 <div id="cust-site">
-  <a href="https://web.archive.org/web/20210416200336/http://luajit.org/"><span>Lua<span id="cust-logo">JIT</span></span></a>
+  <a href="/"><span>牧童<span id="cust-logo">Damian</span></span></a>
 </div>
 <div id="cust-header">
-  <h1>The LuaJIT Wiki</h1>
+    <h1><a href="/luajit-wiki/Home"><span>Lua<span id="cust-logo">JIT</span> Wiki</span></a></h1>
 </div>
 <div id="wiki-wrapper" class="page">
 <div id="head">
@@ -46,7 +46,7 @@
 <div id="wiki-content">
 <div class=" has-toc">
   <div id="wiki-toc-main">
-    <div class="toc"><div class="toc-title">Table of Contents</div><ul><ul><li><a href="https://web.archive.org/web/20210416200336/http://wiki.luajit.org/JIT-Compiler-API#jit-attach">jit.attach</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210416200336/http://wiki.luajit.org/JIT-Compiler-API#jit-util-funcinfo-func-pc">jit.util.funcinfo(func, pc)</a></li></ul></ul></div>
+    <div class="toc"><div class="toc-title">Table of Contents</div><ul><ul><li><a href="JIT-Compiler-API#jit-attach">jit.attach</a></li></ul></ul><ul><ul><li><a href="JIT-Compiler-API#jit-util-funcinfo-func-pc">jit.util.funcinfo(func, pc)</a></li></ul></ul></div>
   </div>
   <div id="wiki-body" class="gollum-markdown-content">
     <div class="markdown-body">
@@ -60,7 +60,7 @@ There's probably a good reason this is undocumented.</p>
 <p>These functions are used in several of the -j library files.
 <code>dump.lua</code> is probably a good place to start.</p>
 
-<h2><a class="anchor" id="jit-attach" href="https://web.archive.org/web/20210416200336/http://wiki.luajit.org/JIT-Compiler-API#jit-attach"><i class="fa fa-link"></i></a>jit.attach</h2>
+<h2><a class="anchor" id="jit-attach" href="JIT-Compiler-API#jit-attach"><i class="fa fa-link"></i></a>jit.attach</h2>
 
 <p>You can attach callbacks to a number of compiler events with <code>jit.attach</code>.  The callback can be called:</p>
 
@@ -108,7 +108,7 @@ There's probably a good reason this is undocumented.</p>
 </li>
 </ul>
 
-<h2><a class="anchor" id="jit-util-funcinfo-func-pc" href="https://web.archive.org/web/20210416200336/http://wiki.luajit.org/JIT-Compiler-API#jit-util-funcinfo-func-pc"><i class="fa fa-link"></i></a>jit.util.funcinfo(func, pc)</h2>
+<h2><a class="anchor" id="jit-util-funcinfo-func-pc" href="JIT-Compiler-API#jit-util-funcinfo-func-pc"><i class="fa fa-link"></i></a>jit.util.funcinfo(func, pc)</h2>
 
 <p>When passed <code>func</code> and <code>pc</code> from a <code>jit.attach</code> callback,
 <code>jit.util.funcinfo</code> returns a table of information about the function,
@@ -159,12 +159,12 @@ much like <code>debug.getinfo</code>.</p>
 <div id="footer">
   <p id="last-edit">Last edited by <b>Mike Pall</b>, 2012-05-31 14:41:13</p>
     <p>
-      <a id="delete-link" href="https://web.archive.org/web/20210416200336/http://wiki.luajit.org/JIT-Compiler-API" data-confirm="Are you sure you want to delete this page?"><span>Delete this Page</span></a>
+      <a id="delete-link" href="JIT-Compiler-API" data-confirm="Are you sure you want to delete this page?"><span>Delete this Page</span></a>
     </p>
 </div>
 </div>
 
-<form name="rename" method="POST" action="https://web.archive.org/web/20210416200336/http://wiki.luajit.org/rename/JIT-Compiler-API">
+<form name="rename" method="POST" action="http://wiki.luajit.org/rename/JIT-Compiler-API">
   <input type="hidden" name="rename">
   <input type="hidden" name="message">
 </form>

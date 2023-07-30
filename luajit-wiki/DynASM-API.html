@@ -3,7 +3,7 @@
   <meta name="MobileOptimized" content="width">
   <meta name="HandheldFriendly" content="true">
   <meta name="viewport" content="width=device-width">
-  <link rel="”alternate”" type="”application/rss+xml”" title="”wiki.luajit.org" edit="" and="" commit="" log”="" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/%E2%80%9Dhttp://wiki.luajit.org/feeds/global.xml%E2%80%9D">
+  <link rel="”alternate”" type="”application/rss+xml”" title="”wiki.luajit.org" edit="" and="" commit="" log”="" href="http://wiki.luajit.org/%E2%80%9Dhttp://wiki.luajit.org/feeds/global.xml%E2%80%9D">
   <link rel="stylesheet" type="text/css" href="./js/gollum.css" media="all">
   <link rel="stylesheet" type="text/css" href="./js/editor.css" media="all">
   <link rel="stylesheet" type="text/css" href="./js/dialog.css" media="all">
@@ -35,10 +35,10 @@
 
 <body class="webkit">
 <div id="cust-site">
-  <a href="https://web.archive.org/web/20210924033048/http://luajit.org/"><span>Lua<span id="cust-logo">JIT</span></span></a>
+  <a href="/"><span>牧童<span id="cust-logo">Damian</span></span></a>
 </div>
 <div id="cust-header">
-  <h1>The LuaJIT Wiki</h1>
+    <h1><a href="/luajit-wiki/Home"><span>Lua<span id="cust-logo">JIT</span> Wiki</span></a></h1>
 </div>
 <div id="wiki-wrapper" class="page">
 <div id="head">
@@ -47,13 +47,13 @@
 <div id="wiki-content">
 <div class=" has-toc">
   <div id="wiki-toc-main">
-    <div class="toc"><div class="toc-title">Table of Contents</div><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#about">About</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#introduction">Introduction</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#external-resources">External resources</a></li></ul></ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#workflow-integration">Workflow Integration</a></li></ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions">DynASM proto API Functions</a></li></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_init-dst_decl-int-maxsection">dasm_init(Dst_DECL, int maxsection)</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_setupglobal-dst_decl-void-gl-unsigned-int-maxgl">dasm_setupglobal(Dst_DECL, void **gl, unsigned int maxgl)</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_growpc-dst_decl-unsigned-int-maxpc">dasm_growpc(Dst_DECL, unsigned int maxpc)</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_setup-dst_decl-const-void-actionlist">dasm_setup(Dst_DECL, const void *actionlist)</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_put-dst_decl-int-start">dasm_put(Dst_DECL, int start, ...)</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_link-dst_decl-size_t-szp">dasm_link(Dst_DECL, size_t *szp)</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_encode-dst_decl-void-buffer">dasm_encode(Dst_DECL, void *buffer)</a></li></ul></ul><ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_getpclabel-dst_decl-unsigned-int-pc">dasm_getpclabel(Dst_DECL, unsigned int pc)</a></li></ul></ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#label-types">Label types</a></li></ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#pseudo-opcodes">Pseudo-opcodes</a></li></ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#example">Example</a></li></ul><ul><li><a href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#caveats">Caveats</a></li></ul></div>
+    <div class="toc"><div class="toc-title">Table of Contents</div><ul><ul><li><a href="dynasm-api#about">About</a></li></ul></ul><ul><ul><li><a href="dynasm-api#introduction">Introduction</a></li></ul></ul><ul><ul><li><a href="dynasm-api#external-resources">External resources</a></li></ul></ul><ul><li><a href="dynasm-api#workflow-integration">Workflow Integration</a></li></ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions">DynASM proto API Functions</a></li></ul><ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions_dasm_init-dst_decl-int-maxsection">dasm_init(Dst_DECL, int maxsection)</a></li></ul></ul><ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions_dasm_setupglobal-dst_decl-void-gl-unsigned-int-maxgl">dasm_setupglobal(Dst_DECL, void **gl, unsigned int maxgl)</a></li></ul></ul><ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions_dasm_growpc-dst_decl-unsigned-int-maxpc">dasm_growpc(Dst_DECL, unsigned int maxpc)</a></li></ul></ul><ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions_dasm_setup-dst_decl-const-void-actionlist">dasm_setup(Dst_DECL, const void *actionlist)</a></li></ul></ul><ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions_dasm_put-dst_decl-int-start">dasm_put(Dst_DECL, int start, ...)</a></li></ul></ul><ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions_dasm_link-dst_decl-size_t-szp">dasm_link(Dst_DECL, size_t *szp)</a></li></ul></ul><ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions_dasm_encode-dst_decl-void-buffer">dasm_encode(Dst_DECL, void *buffer)</a></li></ul></ul><ul><ul><li><a href="dynasm-api#dynasm-proto-api-functions_dasm_getpclabel-dst_decl-unsigned-int-pc">dasm_getpclabel(Dst_DECL, unsigned int pc)</a></li></ul></ul><ul><li><a href="dynasm-api#label-types">Label types</a></li></ul><ul><li><a href="dynasm-api#pseudo-opcodes">Pseudo-opcodes</a></li></ul><ul><li><a href="dynasm-api#example">Example</a></li></ul><ul><li><a href="dynasm-api#caveats">Caveats</a></li></ul></div>
   </div>
   <div id="wiki-body" class="gollum-markdown-content">
     <div class="markdown-body">
 
 
-<h2><a class="anchor" id="about" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#about"><i class="fa fa-link"></i></a>About</h2>
+<h2><a class="anchor" id="about" href="dynasm-api#about"><i class="fa fa-link"></i></a>About</h2>
 
 <p>DynASM is a Dynamic Assembler for code generation engines. DynASM has been developed primarily as a tool for LuaJIT, but might be useful for other projects, too.</p>
 
@@ -61,24 +61,24 @@
 
 <p>DynASM is Copyright © 2005-2013 Mike Pall. DynASM is free software, released under the MIT license.</p>
 
-<h2><a class="anchor" id="introduction" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#introduction"><i class="fa fa-link"></i></a>Introduction</h2>
+<h2><a class="anchor" id="introduction" href="dynasm-api#introduction"><i class="fa fa-link"></i></a>Introduction</h2>
 
 <p>DynASM is a very well-designed tool that provides a very useful framework for generating dynamic code during program execution. One of DynASM's strengths is that it allows intermixing C and assembly code in the same source file in a natural and free-form manner. Unfortunately, DynASM is rather weak in the documentation department. Figuring out feature use often requires "reverse-engineering" its usage example from the LuaJIT source, which seriously hinders DynASM's accessibility to potential new users.</p>
 
 <p>This wiki entry is here to change that by providing a central repository for the community to help document DynASM's features along with simple example usage.</p>
 
-<h2><a class="anchor" id="external-resources" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#external-resources"><i class="fa fa-link"></i></a>External resources</h2>
+<h2><a class="anchor" id="external-resources" href="dynasm-api#external-resources"><i class="fa fa-link"></i></a>External resources</h2>
 
 <ul>
-<li><a href="https://web.archive.org/web/20210924033048/http://luajit.org/dynasm.html">DynASM Page</a></li>
-<li><a href="https://web.archive.org/web/20210924033048/https://corsix.github.io/dynasm-doc/">Third-party documentation made by Peter Cawley</a></li>
+<li><a href="http://luajit.org/dynasm.html">DynASM Page</a></li>
+<li><a href="https://corsix.github.io/dynasm-doc/">Third-party documentation made by Peter Cawley</a></li>
 </ul>
 
-<h1><a class="anchor" id="workflow-integration" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#workflow-integration"><i class="fa fa-link"></i></a>Workflow Integration</h1>
+<h1><a class="anchor" id="workflow-integration" href="dynasm-api#workflow-integration"><i class="fa fa-link"></i></a>Workflow Integration</h1>
 
-<h1><a class="anchor" id="dynasm-proto-api-functions" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions"><i class="fa fa-link"></i></a>DynASM proto API Functions</h1>
+<h1><a class="anchor" id="dynasm-proto-api-functions" href="dynasm-api#dynasm-proto-api-functions"><i class="fa fa-link"></i></a>DynASM proto API Functions</h1>
 
-<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_init-dst_decl-int-maxsection" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_init-dst_decl-int-maxsection"><i class="fa fa-link"></i></a>dasm_init(Dst_DECL, int maxsection)</h2>
+<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_init-dst_decl-int-maxsection" href="dynasm-api#dynasm-proto-api-functions_dasm_init-dst_decl-int-maxsection"><i class="fa fa-link"></i></a>dasm_init(Dst_DECL, int maxsection)</h2>
 
 <p>Initialize and free DynASM state</p>
 
@@ -86,62 +86,62 @@
 DASM_FDEF void dasm_free(Dst_DECL);
 </code></pre>
 
-<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_setupglobal-dst_decl-void-gl-unsigned-int-maxgl" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_setupglobal-dst_decl-void-gl-unsigned-int-maxgl"><i class="fa fa-link"></i></a>dasm_setupglobal(Dst_DECL, void **gl, unsigned int maxgl)</h2>
+<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_setupglobal-dst_decl-void-gl-unsigned-int-maxgl" href="dynasm-api#dynasm-proto-api-functions_dasm_setupglobal-dst_decl-void-gl-unsigned-int-maxgl"><i class="fa fa-link"></i></a>dasm_setupglobal(Dst_DECL, void **gl, unsigned int maxgl)</h2>
 
 <p>Setup global array. Must be called before <code>dasm_setup()</code></p>
 
 <pre><code>DASM_FDEF void dasm_setupglobal(Dst_DECL, void **gl, unsigned int maxgl);
 </code></pre>
 
-<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_growpc-dst_decl-unsigned-int-maxpc" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_growpc-dst_decl-unsigned-int-maxpc"><i class="fa fa-link"></i></a>dasm_growpc(Dst_DECL, unsigned int maxpc)</h2>
+<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_growpc-dst_decl-unsigned-int-maxpc" href="dynasm-api#dynasm-proto-api-functions_dasm_growpc-dst_decl-unsigned-int-maxpc"><i class="fa fa-link"></i></a>dasm_growpc(Dst_DECL, unsigned int maxpc)</h2>
 
 <p>Grow PC label array. Can be called after <code>dasm_setup()</code></p>
 
 <pre><code>DASM_FDEF void dasm_growpc(Dst_DECL, unsigned int maxpc);
 </code></pre>
 
-<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_setup-dst_decl-const-void-actionlist" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_setup-dst_decl-const-void-actionlist"><i class="fa fa-link"></i></a>dasm_setup(Dst_DECL, const void *actionlist)</h2>
+<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_setup-dst_decl-const-void-actionlist" href="dynasm-api#dynasm-proto-api-functions_dasm_setup-dst_decl-const-void-actionlist"><i class="fa fa-link"></i></a>dasm_setup(Dst_DECL, const void *actionlist)</h2>
 
 <p>Setup encoder</p>
 
 <pre><code>DASM_FDEF void dasm_setup(Dst_DECL, const void *actionlist);
 </code></pre>
 
-<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_put-dst_decl-int-start" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_put-dst_decl-int-start"><i class="fa fa-link"></i></a>dasm_put(Dst_DECL, int start, ...)</h2>
+<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_put-dst_decl-int-start" href="dynasm-api#dynasm-proto-api-functions_dasm_put-dst_decl-int-start"><i class="fa fa-link"></i></a>dasm_put(Dst_DECL, int start, ...)</h2>
 
 <p>Feed encoder with actions. Calls are generated by pre-processor</p>
 
 <pre><code>DASM_FDEF void dasm_put(Dst_DECL, int start, ...);
 </code></pre>
 
-<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_link-dst_decl-size_t-szp" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_link-dst_decl-size_t-szp"><i class="fa fa-link"></i></a>dasm_link(Dst_DECL, size_t *szp)</h2>
+<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_link-dst_decl-size_t-szp" href="dynasm-api#dynasm-proto-api-functions_dasm_link-dst_decl-size_t-szp"><i class="fa fa-link"></i></a>dasm_link(Dst_DECL, size_t *szp)</h2>
 
 <p>Link sections and return the resulting size</p>
 
 <pre><code>DASM_FDEF int dasm_link(Dst_DECL, size_t *szp);
 </code></pre>
 
-<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_encode-dst_decl-void-buffer" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_encode-dst_decl-void-buffer"><i class="fa fa-link"></i></a>dasm_encode(Dst_DECL, void *buffer)</h2>
+<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_encode-dst_decl-void-buffer" href="dynasm-api#dynasm-proto-api-functions_dasm_encode-dst_decl-void-buffer"><i class="fa fa-link"></i></a>dasm_encode(Dst_DECL, void *buffer)</h2>
 
 <p>Encode sections into buffer</p>
 
 <pre><code>DASM_FDEF int dasm_encode(Dst_DECL, void *buffer);
 </code></pre>
 
-<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_getpclabel-dst_decl-unsigned-int-pc" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#dynasm-proto-api-functions_dasm_getpclabel-dst_decl-unsigned-int-pc"><i class="fa fa-link"></i></a>dasm_getpclabel(Dst_DECL, unsigned int pc)</h2>
+<h2><a class="anchor" id="dynasm-proto-api-functions_dasm_getpclabel-dst_decl-unsigned-int-pc" href="dynasm-api#dynasm-proto-api-functions_dasm_getpclabel-dst_decl-unsigned-int-pc"><i class="fa fa-link"></i></a>dasm_getpclabel(Dst_DECL, unsigned int pc)</h2>
 
 <p>Get PC label offset</p>
 
 <pre><code>DASM_FDEF int dasm_getpclabel(Dst_DECL, unsigned int pc);
 </code></pre>
 
-<h1><a class="anchor" id="label-types" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#label-types"><i class="fa fa-link"></i></a>Label types</h1>
+<h1><a class="anchor" id="label-types" href="dynasm-api#label-types"><i class="fa fa-link"></i></a>Label types</h1>
 
-<h1><a class="anchor" id="pseudo-opcodes" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#pseudo-opcodes"><i class="fa fa-link"></i></a>Pseudo-opcodes</h1>
+<h1><a class="anchor" id="pseudo-opcodes" href="dynasm-api#pseudo-opcodes"><i class="fa fa-link"></i></a>Pseudo-opcodes</h1>
 
-<h1><a class="anchor" id="example" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#example"><i class="fa fa-link"></i></a>Example</h1>
+<h1><a class="anchor" id="example" href="dynasm-api#example"><i class="fa fa-link"></i></a>Example</h1>
 
-<h1><a class="anchor" id="caveats" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation#caveats"><i class="fa fa-link"></i></a>Caveats</h1>
+<h1><a class="anchor" id="caveats" href="dynasm-api#caveats"><i class="fa fa-link"></i></a>Caveats</h1>
 
     </div>
   </div>
@@ -151,12 +151,12 @@ DASM_FDEF void dasm_free(Dst_DECL);
 <div id="footer">
   <p id="last-edit">Last edited by <b>Spar (GitSparTV)</b>, 2020-07-26 16:07:00</p>
     <p>
-      <a id="delete-link" href="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/dynasm-api-documentation" data-confirm="Are you sure you want to delete this page?"><span>Delete this Page</span></a>
+      <a id="delete-link" href="dynasm-api-documentation" data-confirm="Are you sure you want to delete this page?"><span>Delete this Page</span></a>
     </p>
 </div>
 </div>
 
-<form name="rename" method="POST" action="https://web.archive.org/web/20210924033048/http://wiki.luajit.org/rename/dynasm-api-documentation">
+<form name="rename" method="POST" action="http://wiki.luajit.org/rename/dynasm-api-documentation">
   <input type="hidden" name="rename">
   <input type="hidden" name="message">
 </form>
