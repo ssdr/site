@@ -31,7 +31,7 @@ root: true
 {% assign photos = site.static_files | where: "image", true | slice: 0, 5 %}
 {% for photo in photos %}
   <a href="/photos#P{{ photo.guid}}" class="image-link">
-    <img src="{{ photo.path }}/thumbnail" height="200" alt="{{ photo.alt }}" loading="lazy" style="aspect-ratio: {{ photo.ratio }};">
+    <img src="{{ photo.path }}" height="200" alt="{{ photo.alt }}" loading="lazy" style="aspect-ratio: {{ photo.ratio }};">
   </a>
 {% endfor %}
 </div>
