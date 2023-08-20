@@ -1,45 +1,54 @@
 ---
 title: Hey, this is 牧童Damian.
 layout: default
+root: true
 ---
 
-<ul class="terminal">
-  <li>I am based in Beijing since 2013.</li>
-  <li>
+<p>
+    I am a software engineer.
+</p>
+
+<p>
+    Based in Beijing since 2013. <span class="time" data-timestamp-text="It's currently {time}."></span>
+</p>
+
+<p>Here are some <a href="/photos">Photos</a>.</p>
+
+<nav aria-label="Social links">
     <a href="/wechat" ref="me">Wechat</a> /
     <a href="https://github.com/ssdr" rel="me">GitHub</a> /
-    ssdrliu at gmail.com.
-  </li>
-  <li>Here are some <a href="/photos">Photos</a>.</li>
-</ul>
+    <a>ssdrliu at gmail.com</a>
+</nav>
 
-<ul class="terminal">
-  <li><a href="/notes">Notes</a> <a href="/notes.xml">RSS</a></li>
+
+<div class="lang">
+  <a href="/zh-CN/">中文</a><a href="/" aria-current="true">English</a>
+</div>
+
+
+<hr class="hr">
+
+<h2 class="text"><a href="/notes">Notes</a></h2> <a href="/notes.xml" class="styled-link">RSS</a>
+
 {% assign note = site.data.notes[0] %}
 <div class="note">
-  <div class="note-heading">Latest note # {{ note.date | date: "%b %d, %Y" }}</div>
+  <div class="note-heading">Latest: {{ note.date | date: "%b %d, %Y" }}</div>
   {{ note.content | markdownify }}
 </div>
-{% assign note = site.data.notes[1] %}
-<div class="note">
-  <div class="note-heading">Latest note # {{ note.date | date: "%b %d, %Y" }}</div>
-  {{ note.content | markdownify }}
-</div>
-</ul>
 
-<ul class="terminal">
-  <li><a href="/posts">Blogs</a> <a href="/feed.xml">RSS</a></li>
+
+<hr class="hr">
+
+<h2 class="text"><a href="/posts">Posts</a></h2> <a href="/feed.xml" class="styled-link">RSS</a>
+
+<ul aria-label="posts" class="terminal">
 {% assign post = site.posts[0] %}
-<div class="note">
-  <div class="note-heading">Latest blog # {{ post.date | date: "%b %d, %Y" }}</div>
-  <a href="{{ post.url }}" class="small">{{ post.title }}</a>
-  {{ post.excerpt | markdownify }}
-</div>
-{% assign post = site.posts[1] %}
-<div class="note">
-  <div class="note-heading">Latest blog # {{ post.date | date: "%b %d, %Y" }}</div>
-  <a href="{{ post.url }}" class="small">{{ post.title }}</a>
-  {{ post.excerpt | markdownify }}
-</div>
-</ul>
+<li class="line"><a href="{{ post.url }}">{{ post.title }}</a><br>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %e, %Y" }}</time>
+</li>
 
+{% assign post = site.posts[1] %}
+<li class="line"><a href="{{ post.url }}">{{ post.title }}</a><br>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %e, %Y" }}</time>
+</li>
+</ul>

@@ -1,13 +1,33 @@
 ---
 layout: default
-title: Notes
+title: Rencent notes
 ---
 
-{% for note in site.data.notes %}
-<div class="note" id="date-{{ note.date | date: "%Y-%m-%d" }}{{ note.slug }}">
-  <h2 class="note-heading">
-    <a href="#date-{{ note.date | date: "%Y-%m-%d" }}{{ note.slug }}">{{ note.date | date: "%b %d, %Y" }} #</a>
-  </h2>
+<ul class="notes">
+{% for note in site.data.notes limit: 100 %}
+<li class="note">
+    <div class="note-heading" style="display: flex; justify-content: space-between; align-items: center;;">
+      <div>
+        <a href="{{ note.url }}" class="monospace">
+          <h2 class="text"><u>{{ note.date | date: "%B %e, %Y" }}</u></h2>
+        </a>
+      </div>
+    </div>
   {{ note.content | markdownify }}
-</div>
+</li>
 {% endfor %}
+</ul>
+
+{% if notes.size > 100 %}
+  <hr>
+  <p class="desc">Only the most recent 100 notes are shown.</p>
+  {% for note in notes %}
+    {% assign id = note.date | date: "%Y%m%d%I%M" %}
+    <a class="note" id="t{{id}}" href="{{ note.url }}" hidden></a>
+  {% endfor %}
+  <script>
+    if (window.location.hash) {
+      document.querySelector(document.location.hash)?.click()
+    }
+  </script>
+{% endif %}

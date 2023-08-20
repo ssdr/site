@@ -1,35 +1,31 @@
 ---
 layout: default
+type: photos
 title: Photo Booth
 ---
 
-<html>
-  <head>
-    <style>
-      body {
-        font-family: courier, monospace;
-        padding: 10%;
-        text-align: center;
-        font-size: 13px;
-        line-height: 1.65em;
-      }
-      img {
-        margin: 20px 10px 0;
-      }
-    </style>
+<div class="photos-wrapper" id="photos">
+{% assign photos = site.static_files | where: "image", true %}
+{% for photo in photos %}
+    <figure id="P{{ photo.guid }}" class="figure-{{ photo.orientation }}">
+      <a href="{{ photo.path }}/public" class="image-link">
+        <img
+          src="{{ photo.path }}/public"
+          height="{{ photo.height }}"
+          style="aspect-ratio: {{ photo.ratio }}"
+          alt="{{ photo.alt }}"
+          title="{{ photo.alt }}"
+          class="{{ photo.orientation }}"
+          loading="lazy">
+      </a>
+      <figcaption>
+        <div class="desc photo-metadata">
+          <div>{{ photo.createdAt | date: "%Y/%m/%d (%a)" }}</div>
+        </div>
+        {% capture caption %}{{ photo.caption | strip }}{% endcapture %}
+        {% if caption != "-" and caption != "" %}{{ caption | markdownify }}{% endif %}
+      </figcaption>
+    </figure>
+{% endfor %}
 
-  </head>
-
-  <body>
-    <main>
-
-    {% assign image_files = site.static_files | where: "image", true %}
-    {% for img in image_files %}
-        <a href={{ img.path }}><img width=50 src={{ img.path }}></img></a>
-    {% endfor %}
-
-    <p></p>
-    <div id="disqus_thread"></div>
-    </main>
-  </body>
-</html>
+</div>

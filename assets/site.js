@@ -31,9 +31,11 @@ function settime() {
 
 settime()
 
-/*
+const statusEl = document.querySelector('[data-status-loading]')
+
 try {
-  const s = await (await fetch('https://muan.github.io/status/index.txt')).text()
+  statusEl.hidden = false
+  const s = await (await fetch('https://yanl.cc/status.txt')).text()
   if (s.trim() !== '') {
     const [datetime, text] = s.split('\n')
     const date = relativeDate(new Date(datetime))
@@ -42,12 +44,11 @@ try {
       document.querySelector('[data-status-datetime]').textContent = `(${date})`
     }
   }
-  document.querySelector('[data-status-loading]').removeAttribute('data-status-loading')
+  statusEl.removeAttribute('data-status-loading')
 } catch (e) {
-  document.querySelector('[data-status-loading]').remove()
+  statusEl.remove()
   console.warn(e)
 }
-*/
 
 function relativeDate(date) {
   const now = new Date()
