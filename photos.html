@@ -8,9 +8,9 @@ title: Photo Booth
 {% assign photos = site.static_files | where: "image", true %}
 {% for photo in photos %}
     <figure id="P{{ photo.guid }}" class="figure-{{ photo.orientation }}">
-      <a href="{{ photo.path }}/public" class="image-link">
+      <a href="{{ photo.path }}" class="image-link">
         <img
-          src="{{ photo.path }}/public"
+          src="{{ photo.path }}"
           height="{{ photo.height }}"
           style="aspect-ratio: {{ photo.ratio }}"
           alt="{{ photo.alt }}"

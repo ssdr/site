@@ -1,15 +1,16 @@
 ---
-title: Hey, this is Damian.
+title: 刘岩
+permalink: /zh-CN/
 layout: default
 root: true
 ---
 
 <p>
-    I am a software engineer.
+    职业：软件工程师。
 </p>
 
 <p>
-    Based in Beijing since 2013. <span class="time" data-timestamp-text="It's currently {time}."></span>
+    从2013年起一直呆在北京。<span class="time" data-timestamp-text="当前时间 {time}。"></span>
 </p>
 
 <nav aria-label="Social links">
@@ -20,13 +21,13 @@ root: true
 
 
 <div class="lang">
-  <a href="/zh-CN/">中文</a><a href="/" aria-current="true">English</a>
+  <a href="/zh-CN/" aria-current="true">中文</a><a href="/">English</a>
 </div>
 
 
 <hr class="hr">
 
-<h2 class="text">Photos</h2><a href="/photos" class="styled-link">All photos</a>
+<h2 class="text">照片</h2><a href="/photos" class="styled-link">全部照片</a>
 <div class="photos">
 {% assign photos = site.static_files | where: "image", true | slice: 0, 5 %}
 {% for photo in photos %}
@@ -38,7 +39,7 @@ root: true
 
 <hr class="hr">
 
-<h2 class="text"><a href="/notes">Notes</a></h2> <a href="/notes.xml" class="styled-link">RSS</a>
+<h2 class="text"><a href="/notes">随笔</a></h2> <a href="/notes.xml" class="styled-link">RSS</a>
 
 {% assign note = site.data.notes[0] %}
 <div class="note">
@@ -49,7 +50,7 @@ root: true
 
 <hr class="hr">
 
-<h2 class="text"><a href="/posts">Posts</a></h2> <a href="/feed.xml" class="styled-link">RSS</a>
+<h2 class="text"><a href="/posts">文章</a></h2> <a href="/feed.xml" class="styled-link">RSS</a>
 
 <ul aria-label="posts" class="terminal">
 {% assign post = site.posts[0] %}
