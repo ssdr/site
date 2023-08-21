@@ -41,7 +41,7 @@ root: true
 
 <h2 class="text"><a href="/notes">随笔</a></h2> <a href="/notes.xml" class="styled-link">RSS</a>
 
-{% assign note = site.data.notes[0] %}
+{% assign note = site.notes | last %}
 <div class="note">
   <div class="note-heading">Latest: {{ note.date | date: "%b %d, %Y" }}</div>
   {{ note.content | markdownify }}
