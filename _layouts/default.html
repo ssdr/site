@@ -87,6 +87,7 @@
         {% endif %}
         {{ content }}
       {% endcapture %}
+
       {% if page.collection == "posts" or page.collection == "pages" %}
         <article>
           {{ content_and_then_some }}
@@ -96,6 +97,7 @@
       {% else %}
         {{ content_and_then_some }}
       {% endif %}
+
       {% if page.feature == 1 or page.open_heart %}
         <hr class="hr">
         <div class="smol">
@@ -108,12 +110,12 @@
         </div>
       {% endif %}
     </main>
+
     <footer>
       <hr class="hr">
-      {% capture label %}{% if page.path == 'index-zh-CN.html' %}查看原始碼{% else %}View source{% endif %}{% endcapture %}
+      {% capture label %}{% if page.path == 'index-zh-CN.html' %}查看源码{% else %}View source{% endif %}{% endcapture %}
       Yan LIU
       (<a href="https://github.com/ssdr/ssdr.github.io">{{ label }}</a>)<br>
-
     </footer>
 
     {% if page.root %}
