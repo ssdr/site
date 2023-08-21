@@ -6,8 +6,6 @@ category: Nginx
 * 目录
 {:toc #markdown-toc}
 
-*[reference](http://nginx.org/en/docs/)*
-
 ## 简介
 
  - 安装Nginx
@@ -22,6 +20,7 @@ category: Nginx
  - 配置文件中的计量单位
  - 命令行参数
  - Nginx for Windows
+ - 支持QUIC和HTTP/3
 
  - [Nginx 是如何处理一个请求的](/ngx-docs/how-nginx-processes-a-request)
  - [虚拟主机名 Server names](/ngx-docs/server-names)
@@ -89,27 +88,28 @@ category: Nginx
  - ngx_http_mirror_module
  - ngx_http_mp4_module
  - ngx_http_perl_module
- - ngx_http_proxy_module
+ - **ngx_http_proxy_module**
  - ngx_http_random_index_module
  - ngx_http_realip_module
  - ngx_http_referer_module
- - ngx_http_rewrite_module
+ - **ngx_http_rewrite_module**
  - ngx_http_scgi_module
  - ngx_http_secure_link_module
  - ngx_http_session_log_module
  - ngx_http_spdy_module
  - ngx_http_split_clients_module
  - ngx_http_ssi_module
- - ngx_http_ssl_module
+ - **ngx_http_ssl_module**
  - ngx_http_status_module
  - ngx_http_stub_status_module
  - ngx_http_sub_module
- - ngx_http_upstream_module
+ - **ngx_http_upstream_module**
  - ngx_http_upstream_conf_module
  - ngx_http_upstream_hc_module
  - ngx_http_userid_module
  - ngx_http_uwsgi_module
- - ngx_http_v2_module
+ - **ngx_http_v2_module**
+ - **ngx_http_v3_module**
  - ngx_http_xslt_module
 
  - ngx_mail_core_module
@@ -140,6 +140,10 @@ category: Nginx
  - ngx_stream_zone_sync_module
 
  - ngx_google_perftools_module
+ - ngx_otel_module
 
  ---
- *updated at 2020.06.22*
+
+*[reference](http://nginx.org/en/docs/)*
+
+*updated at 2023.08.21*
