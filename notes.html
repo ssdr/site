@@ -4,6 +4,21 @@ title: Rencent notes
 ---
 
 <ul class="notes">
+{% assign notes = site.notes | sort: "date" | reverse %}
+{% for note in notes limit: 100 %}
+  <li class="note">
+    <div class="note-heading" style="display: flex; justify-content: space-between; align-items: center;;">
+      <div>
+        <a href="{{ note.url }}" class="monospace">
+          <h2 class="text"><u>{{ note.date | date: "%B %e, %Y" }}</u></h2>
+        </a>
+      </div>
+      <a href="https://github.com/ssdr/site/edit/master/{{ note.path }}" class="monospace" tabindex="-1" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+    {{ note.content | markdownify }}
+  </li>
+{% endfor %}
+
 {% for note in site.data.notes limit: 100 %}
 <li class="note">
     <div class="note-heading" style="display: flex; justify-content: space-between; align-items: center;;">
