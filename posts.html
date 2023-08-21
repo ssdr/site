@@ -3,10 +3,9 @@ layout: default
 title: Blogs
 ---
 
-<summary><h2 class="as-text"><a href="/luajit-wiki/Home">Luajit wiki</a></h2></summary>
-
-<summary><h2 class="as-text">Nginx</h2></summary>
-  <ul class="note">
+<hr class="hr">
+<h2 class="text">Nginx</h2>
+  <ul aria-label="posts" class="terminal">
     {% for post in site.posts %}
       {% if post.category == 'Nginx' and post.title == 'Nginx文档【持续更新】' %}
           <li id="date-{{ post.date | date: "%Y-%m-%d" }}{{ post.slug }}">
@@ -23,8 +22,15 @@ title: Blogs
     {% endfor %}
   </ul>
 
-<summary><h2 class="as-text">Blogs</h2></summary>
-  <ul class="note">
+<hr class="hr">
+<h2 class="text">LuaJIT</h2>
+  <ul aria-label="posts" class="terminal">
+      <a href="/luajit-wiki/Home" class="small">wiki</a>
+  </ul>
+
+<hr class="hr">
+<h2 class="text">Blogs</h2>
+  <ul aria-label="posts" class="terminal">
     {% for post in site.posts %}
       {% assign cgrs = post.category %}
       {% if cgrs != 'Nginx文档' and cgrs != 'Nginx' and cgrs != 'manual' and cgrs != 'leetcode' %}
