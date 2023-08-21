@@ -1,5 +1,5 @@
-{% if page.path contains "zh-TW" %}
-  {% assign lang = "zh-TW" %}
+{% if page.path contains "zh-CN" %}
+  {% assign lang = "zh-CN" %}
 {% else %}
   {% assign lang = "en" %}
 {% endif %}
@@ -51,7 +51,7 @@
         <img class="logo" src="/assets/logo.png">
         -->
         {% if page.root != true %}
-          <span class="font">Damian liu</span>
+          <span class="font">Damian Liu</span>
         {% endif %}
       </div>
       <h1 class="h1">
@@ -110,7 +110,7 @@
     </main>
     <footer>
       <hr class="hr">
-      {% capture label %}{% if page.path == 'index-zh-TW.html' %}查看原始碼{% else %}View source{% endif %}{% endcapture %}
+      {% capture label %}{% if page.path == 'index-zh-CN.html' %}查看原始碼{% else %}View source{% endif %}{% endcapture %}
       Yan LIU
       (<a href="https://github.com/ssdr/ssdr.github.io">{{ label }}</a>)<br>
 

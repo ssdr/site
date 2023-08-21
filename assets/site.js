@@ -3,13 +3,13 @@ function settime() {
   if (!timestamp || !('Intl' in window)) return
 
   const options = {
-    timeZone: "Asia/Taipei",
+    timeZone: "Asia/Shanghai",
     timeStyle: "short",
     hour12: false
   }
 
   // https://gist.github.com/muan/e7414b6241f088090acd916ed965540e
-  let time = new Intl.DateTimeFormat(navigator.language || "zh-TW", options).format(new Date())
+  let time = new Intl.DateTimeFormat(navigator.language || "zh-CN", options).format(new Date())
 
   // https://bugs.chromium.org/p/chromium/issues/detail?id=1262801
   if (time.match(/^24:/)) time = time.replace('24:', '00:')
