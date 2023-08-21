@@ -24,8 +24,10 @@ jobs:
         with:
           node-version: 17.7
 
-      - name: Run script
-        run: echo "${{ inputs.datetime }}\n${{ inputs.content }}" > status.txt
+      - name: Run shell comands
+        run: |
+            echo '${{ inputs.datetime }}' > status.txt
+            echo '${{ inputs.content }}' >> status.txt
 
       - name: Push changes
         run: |
