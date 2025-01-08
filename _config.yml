@@ -8,8 +8,10 @@ sass:
   sass_dir: assets
   style: :compressed
 collections:
-  - notes
-  - posts
+  notes:
+    output: true
+  posts:
+    output: true
 
 defaults:
   -
