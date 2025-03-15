@@ -3,7 +3,7 @@ name: "Add a photo"
 on:
   workflow_dispatch:
     inputs:
-      name:
+      filename:
         description: "File name"
         type: string
         required: true
@@ -31,7 +31,7 @@ jobs:
           node-version: 17.7
 
       - name: Run script
-        run: node .github/workflows/scripts/images.js '${{ inputs.datetime }}' '{{ inputs.name}}' '${{ inputs.content }}'
+        run: node .github/workflows/scripts/images.js '${{ inputs.datetime }}' '{{ inputs.filename}}' '${{ inputs.content }}'
 
       - name: Commit and push
         run: |
@@ -40,4 +40,4 @@ jobs:
           git add .
           git commit -m "Add a photo from Apple shortcuts" || echo "Nothing to commit"
           git fetch origin master
-          git push origin HEAD:main
+          git push origin HEAD:master
