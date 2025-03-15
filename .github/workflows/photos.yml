@@ -1,7 +1,20 @@
-name: "Sync photos"
+name: "Add a photo"
 
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        description: "File name"
+        type: string
+        required: true
+      content:
+        description: "File content"
+        type: string
+        required: true
+      datetime:
+        description: "Datetime"
+        type: string
+        required: true
 concurrency: ci-${{ github.action }}
 jobs:
   process:
@@ -13,13 +26,18 @@ jobs:
         with:
           ref: 'master'
 
-      - name: Copy file
-        run: output=$(curl -L --fail https://photos.muan.dev/photos.json) && echo $output > _data/photos.json
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 17.7
+
+      - name: Run script
+        run: node .github/workflows/scripts/images.js '${{ inputs.datetime }}' '{{ inputs.name}}' '${{ inputs.content }}'
 
       - name: Commit and push
         run: |
-          git config --global user.email "bot@muan.dev"
-          git config --global user.name "photos [bot]"
+          git config --global user.email "bot@yanl.cc"
+          git config --global user.name "damian [bot]"
           git add .
-          git commit -m "Update photos" || echo "Nothing to commit"
+          git commit -m "Add a photo from Apple shortcuts" || echo "Nothing to commit"
+          git fetch origin master
           git push origin HEAD:main

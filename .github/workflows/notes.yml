@@ -29,9 +29,9 @@ jobs:
 
       - name: Push changes
         run: |
-          git config user.email 'bot@damian.dev'
+          git config user.email 'bot@yanl.cc'
           git config user.name 'damian [bot]'
           git add .
-          git commit -m "Add note from Apple shortcuts" || echo "Nothing to commit"
+          git commit -m "Add a note from Apple shortcuts" || echo "Nothing to commit"
           git fetch origin master
           git push origin HEAD:master
