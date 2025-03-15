@@ -2,14 +2,13 @@ import fs from 'fs'
 import path from 'path'
 
 const datetime = process.argv[2]
-const filename = process.argv[3]
-const content = process.argv[4]
+const content = process.argv[3]
 
-const alphabets = [...'umoacenrvwz']
-const idx = fs.readdirSync('images').filter(p => p.startsWith(datetime.split(' ')[0])).length
+const alphabets = [...'abcdefghijklmnopqrstuvwxyz']
+const idx = fs.readdirSync('images').filter(p => p.startsWith(datetime.split('T')[0])).length
 const a = alphabets[idx]
-const filePath = `images/${datetime.split(' ')[0]}-${filename}-${a}${a}.jpg`
+const filePath = `images/${datetime.split('T')[0]}-${a}${a}.jpg`
 
-const img = Buffer.from(content, 'base64').toString('binary')
+const img = Buffer.from(content, 'base64')
 
 fs.writeFileSync(filePath, img)
