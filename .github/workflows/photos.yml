@@ -3,10 +3,6 @@ name: "Add a photo"
 on:
   workflow_dispatch:
     inputs:
-      filename:
-        description: "File name"
-        type: string
-        required: true
       content:
         description: "File content"
         type: string
@@ -31,7 +27,7 @@ jobs:
           node-version: 17.7
 
       - name: Run script
-        run: node .github/workflows/scripts/images.js '${{ inputs.datetime }}' '{{ inputs.filename}}' '${{ inputs.content }}'
+        run: node .github/workflows/scripts/images.js '${{ inputs.datetime }}' '${{ inputs.content }}'
 
       - name: Commit and push
         run: |
