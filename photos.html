@@ -5,7 +5,7 @@ title: Photos
 ---
 
 <div class="photos-wrapper" id="photos">
-{% assign photos = site.static_files | where: "image", true %}
+{% assign photos = site.static_files | where: "image", true | reverse %}
 {% for photo in photos %}
     <figure id="P{{ photo.guid }}" class="figure-{{ photo.orientation }}">
       <a href="{{ photo.path }}" class="image-link">
