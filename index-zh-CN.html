@@ -25,7 +25,7 @@ root: true
 
 <h2 class="text">照片</h2><a href="/photos" class="styled-link">全部照片</a>
 <div class="photos">
-{% assign photos = site.static_files | where: "image", true | slice: 0, 5 %}
+{% assign photos = site.static_files | where: "image", true | reverse | slice: 9, 5 %}
 {% for photo in photos %}
   <a href="/photos#P{{ photo.guid}}" class="image-link">
     <img src="{{ photo.path }}" height="200" alt="{{ photo.alt }}" loading="lazy" style="aspect-ratio: {{ photo.ratio }};">
@@ -49,12 +49,7 @@ root: true
 <h2 class="text"><a href="/posts">文章</a></h2> <a href="/feed.xml" class="styled-link">RSS</a>
 
 <ul aria-label="posts" class="terminal">
-{% assign post = site.posts[0] %}
-<li class="line"><a href="{{ post.url }}">{{ post.title }}</a><br>
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %e, %Y" }}</time>
-</li>
-
-{% assign post = site.posts[1] %}
+{% assign post = site.posts | last %}
 <li class="line"><a href="{{ post.url }}">{{ post.title }}</a><br>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %e, %Y" }}</time>
 </li>
