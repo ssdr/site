@@ -25,7 +25,7 @@ root: true
 
 <h2 class="text">照片</h2><a href="/photos" class="styled-link">全部照片</a>
 <div class="photos">
-{% assign photos = site.static_files | where: "image", true | reverse | slice: 9, 5 %}
+{% assign photos = site.static_files | where: "image", true | reverse | slice: 8, 5 %}
 {% for photo in photos %}
   <a href="/photos#P{{ photo.guid}}" class="image-link">
     <img src="{{ photo.path }}" height="200" alt="{{ photo.alt }}" loading="lazy" style="aspect-ratio: {{ photo.ratio }};">
